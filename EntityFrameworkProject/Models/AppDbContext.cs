@@ -15,6 +15,6 @@ namespace EntityFrameworkProject.Models {
             builder.UseSqlServer(connStr);
         }
 
-        public DbSet<Student> Students { get; set; }
+        public DbSet<Student> Students { get; set; }//this is a property called Students
     }
 }
