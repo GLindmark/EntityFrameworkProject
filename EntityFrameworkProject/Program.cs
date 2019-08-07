@@ -8,6 +8,67 @@ namespace EntityFrameworkProject {
 
             var context = new AppDbContext();//we can only access the tables we include in the DbContext
 
+            var major = context.Majors.SingleOrDefault(m => m.Description == "ESports");//looks for Computer Science, returns the Id
+
+            var student = new Student {
+                Firstname = "J",
+                Lastname = "Bird",
+                GPA = 1.7,
+                SAT = 1100,
+                IsFulltime = true,
+                MajorId = major.Id,
+            };
+
+            context.Students.Add(student);
+             major = context.Majors.SingleOrDefault(m => m.Description == "Public Speaking");//looks for Computer Science, returns the Id
+
+             student = new Student {
+                Firstname = "P",
+                Lastname = "Star",
+                GPA = 1.7,
+                SAT = 650,
+                IsFulltime = false,
+                MajorId = major.Id,
+            };
+
+            context.Students.Add(student);
+             major = context.Majors.SingleOrDefault(m => m.Description == "History");//looks for Computer Science, returns the Id
+
+             student = new Student {
+                Firstname = "J",
+                Lastname = "Neutron",
+                GPA = 5.0,
+                SAT = 2400,
+                IsFulltime = true,
+                MajorId = major.Id,
+            };
+
+            context.Students.Add(student);
+             major = context.Majors.SingleOrDefault(m => m.Description == "Golf Science");//looks for Computer Science, returns the Id
+
+            student = new Student {
+                Firstname = "T",
+                Lastname = "Turner",
+                GPA = 2.5,
+                SAT = 1300,
+                IsFulltime = true,
+                MajorId = major.Id,
+            };
+
+            context.Students.Add(student);
+            major = context.Majors.SingleOrDefault(m => m.Description == "Sociology");//looks for Computer Science, returns the Id
+
+            student = new Student {
+                Firstname = "S",
+                Lastname = "Rogers",
+                GPA = 4.6,
+                SAT = 1000,
+                IsFulltime = false,
+                MajorId = major.Id,
+            };
+
+            context.Students.Add(student);
+            context.SaveChanges();//the SaveChanges must be done to update the database.  You can do multiple Add with just one SaveChanges.
             //var major = new Major();
             //major.Id = 0;
             //major.Description = "Nursing";
@@ -81,10 +142,9 @@ namespace EntityFrameworkProject {
 
 
             //Remove Data from the table
-            var major = context.Majors.Find(3);//to remove data
-            context.Remove(major);
+            //var major = context.Majors.Find(3);//to remove data
+            //context.Remove(major);
 
-            context.SaveChanges();//the SaveChanges must be done to update the database.  You can do multiple Add with just one SaveChanges.
             //var major = context.Majors.Find(4);//need to Find first (use the PK)
             //if (major == null) {
             //    throw new Exception("Not Found");//this confirms the record is not null.  If null, it will stop because of the end braces
