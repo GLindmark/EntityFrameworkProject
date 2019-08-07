@@ -81,7 +81,7 @@ namespace EntityFrameworkProject {
 
 
             //Remove Data from the table
-            var major = context.Majors.Find(5);//to remove data
+            var major = context.Majors.Find(3);//to remove data
             context.Remove(major);
 
             context.SaveChanges();//the SaveChanges must be done to update the database.  You can do multiple Add with just one SaveChanges.
