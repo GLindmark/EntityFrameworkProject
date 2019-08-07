@@ -16,5 +16,7 @@ namespace EntityFrameworkProject.Models {
         }
 
         public DbSet<Student> Students { get; set; }//this is a property called Students
+
+        public DbSet<Major> Majors { get; set; }
     }
 }
