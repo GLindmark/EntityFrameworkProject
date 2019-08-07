@@ -145,7 +145,7 @@ namespace EntityFrameworkProject {
             //var major = context.Majors.Find(3);//to remove data
             //context.Remove(major);
 
-            //var major = context.Majors.Find(4);//need to Find first (use the PK)
+            //var major = context.Majors.Find(4);//This is used to update information.  Need to 'Find' first (use the PK)
             //if (major == null) {
             //    throw new Exception("Not Found");//this confirms the record is not null.  If null, it will stop because of the end braces
             //}
