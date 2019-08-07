@@ -12,11 +12,14 @@ namespace EntityFrameworkProject.Models {
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder) {
             var connStr = "server=localhost\\sqlexpress;database=AppEfdB;trusted_connection=true";
+            builder.UseLazyLoadingProxies();
             builder.UseSqlServer(connStr);
         }
 
         public DbSet<Student> Students { get; set; }//this is a property called Students
 
         public DbSet<Major> Majors { get; set; }
+
+        public DbSet<Major2> Major2s { get; set; }
     }
 }

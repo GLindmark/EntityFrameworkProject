@@ -18,6 +18,8 @@ namespace EntityFrameworkProject.Models {
         public Major() {
 
         }
-
-    }
+        public override string ToString() {
+            return $"{this.Id} | {this.Description} | {this.MinSat}";
+        }
+        }
 }

@@ -17,6 +17,18 @@ namespace EntityFrameworkProject.Models {
         public int SAT { get; set; }
         public double GPA { get; set; }
         public bool IsFulltime { get; set; } = true;
+
+        public override string ToString() {
+            return $"{this.Id}, {this.Firstname} {this.Lastname}, {this.SAT}, {this.GPA}, {this.IsFulltime}, {this.MajorId}, {this.Major}";
+        }
+
+
+
+        public int? MajorId { get; set; }//the '?' creates a nullable int type
+        public virtual Major Major { get; set; } 
+        //the virtual tells EF that this information is not in Student.  The second "Major" is like Fred.
+
+
         //must have a public default constructor
         public Student() {
 
