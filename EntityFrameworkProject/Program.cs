@@ -9,19 +9,27 @@ namespace EntityFrameworkProject {
             var context = new AppDbContext();
 
             //var students = context.Students.ToList();//always start with the context then '.' then property i.e."Students" then '.' 
-            //then a method i.e. "ToArray()"
-            // var students = context.Students.OrderBy(s => s.Firstname).ToList();
+            //                                         // then a method i.e. "ToArray()"
+            //  var students = context.Students.OrderBy(s => s.Firstname).ToList();
+            //Console.WriteLine($"{students}");
 
-
-
-            var studentAvergeSat = context.Students.Average(s => s.SAT);
-
-            Console.WriteLine($"The Average SAT:{studentAvergeSat}");
-
-            //foreach(var student in students) {//it always needs to be variable name 'student' then '.' then ' property 'Firstame' or 'Lastname'
+            //foreach (var student in students) {//it always needs to be variable name 'student' then '.' then ' property 'Firstame' or 'Lastname'
             //    Console.WriteLine($"{student.Firstname}"
             //        );
             //}
+
+
+
+            //var studentAvergeSat = context.Students.Average(s => s.SAT);
+
+            //Console.WriteLine($"The Average SAT:{studentAvergeSat}");
+
+            var majors = context.Majors.OrderBy(m => m.Description).ToList();
+
+            foreach (var major in majors) {
+
+                Console.WriteLine($"{major.Description}");
+            }
 
 
         }
