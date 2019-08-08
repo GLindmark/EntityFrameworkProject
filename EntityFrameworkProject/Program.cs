@@ -8,98 +8,98 @@ namespace EntityFrameworkProject {
 
             var context = new AppDbContext();//we can only access the tables we include in the DbContext
 
-            var major = context.Majors.SingleOrDefault(m => m.Description == "ESports");
-            var course = new Course {
-                Name = "Controller 101",
-                Instructor = "Ms. Take",
-                Credit = 2,
-                MajorId = major.Id,
-            };
-            context.Courses.Add(course);
+            //var major = context.Majors.SingleOrDefault(m => m.Description == "ESports");
+            //var course = new Course {
+            //    Name = "Controller 101",
+            //    Instructor = "Ms. Take",
+            //    Credit = 2,
+            //    MajorId = major.Id,
+            //};
+            //context.Courses.Add(course);
 
-            major = context.Majors.SingleOrDefault(m => m.Description == "Math");
-            course = new Course {
-                Name = "Algebra 301",
-                Instructor = "Dr. Bamber",
-                Credit = 3,
-                MajorId = major.Id,
-            };
-            context.Courses.Add(course);
-
-
-            major = context.Majors.SingleOrDefault(m => m.Description == "Psychology");
-            course = new Course {
-                Name = "Mindfulness 201",
-                Instructor = "Dr. Buddha",
-                Credit = 3,
-                MajorId = major.Id,
-            };
-            context.Courses.Add(course);
+            //major = context.Majors.SingleOrDefault(m => m.Description == "Math");
+            //course = new Course {
+            //    Name = "Algebra 301",
+            //    Instructor = "Dr. Bamber",
+            //    Credit = 3,
+            //    MajorId = major.Id,
+            //};
+            //context.Courses.Add(course);
 
 
-            major = context.Majors.SingleOrDefault(m => m.Description == "History");
-            course = new Course {
-                Name = "Ancient Mesopotamia 303",
-                Instructor = "Dr. Tarjet",
-                Credit = 1,
-                MajorId = major.Id,
-            };
-            context.Courses.Add(course);
+            //major = context.Majors.SingleOrDefault(m => m.Description == "Psychology");
+            //course = new Course {
+            //    Name = "Mindfulness 201",
+            //    Instructor = "Dr. Buddha",
+            //    Credit = 3,
+            //    MajorId = major.Id,
+            //};
+            //context.Courses.Add(course);
 
 
-            major = context.Majors.SingleOrDefault(m => m.Description == "Psychology");
-            course = new Course {
-                Name = "Self Improvement 303",
-                Instructor = "Dr. Ham",
-                Credit = 2,
-                MajorId = major.Id,
-            };
-            context.Courses.Add(course);
+            //major = context.Majors.SingleOrDefault(m => m.Description == "History");
+            //course = new Course {
+            //    Name = "Ancient Mesopotamia 303",
+            //    Instructor = "Dr. Tarjet",
+            //    Credit = 1,
+            //    MajorId = major.Id,
+            //};
+            //context.Courses.Add(course);
 
 
-            major = context.Majors.SingleOrDefault(m => m.Description == "Biology");
-            course = new Course {
-                Name = "Fungi 202",
-                Instructor = "Dr. E-Kholeye",
-                Credit = 3,
-                MajorId = major.Id,
-            };
-            context.Courses.Add(course);
+            //major = context.Majors.SingleOrDefault(m => m.Description == "Psychology");
+            //course = new Course {
+            //    Name = "Self Improvement 303",
+            //    Instructor = "Dr. Ham",
+            //    Credit = 2,
+            //    MajorId = major.Id,
+            //};
+            //context.Courses.Add(course);
 
 
-            major = context.Majors.SingleOrDefault(m => m.Description == "Math");
-            course = new Course {
-                Name = "Geometry 102",
-                Instructor = "Dr. Full",
-                Credit = 2,
-                MajorId = major.Id,
-            };
-            context.Courses.Add(course);
+            //major = context.Majors.SingleOrDefault(m => m.Description == "Biology");
+            //course = new Course {
+            //    Name = "Fungi 202",
+            //    Instructor = "Dr. E-Kholeye",
+            //    Credit = 3,
+            //    MajorId = major.Id,
+            //};
+            //context.Courses.Add(course);
 
 
-            major = context.Majors.SingleOrDefault(m => m.Description == "Nursing");
-            course = new Course {
-                Name = "Sedation 303",
-                Instructor = "Dr. Snooze",
-                Credit = 1,
-                MajorId = major.Id,
-            };
-            context.Courses.Add(course);
+            //major = context.Majors.SingleOrDefault(m => m.Description == "Math");
+            //course = new Course {
+            //    Name = "Geometry 102",
+            //    Instructor = "Dr. Full",
+            //    Credit = 2,
+            //    MajorId = major.Id,
+            //};
+            //context.Courses.Add(course);
 
 
-            major = context.Majors.SingleOrDefault(m => m.Description == "Criminal Justice");
-            course = new Course {
-                Name = "Nagel MS 101",
-                Instructor = "Dr. Bridget",
-                Credit = 3,
-                MajorId = major.Id,
-            };
-            context.Courses.Add(course);
+            //major = context.Majors.SingleOrDefault(m => m.Description == "Nursing");
+            //course = new Course {
+            //    Name = "Sedation 303",
+            //    Instructor = "Dr. Snooze",
+            //    Credit = 1,
+            //    MajorId = major.Id,
+            //};
+            //context.Courses.Add(course);
 
 
+            //major = context.Majors.SingleOrDefault(m => m.Description == "Criminal Justice");
+            //course = new Course {
+            //    Name = "Nagel MS 101",
+            //    Instructor = "Dr. Bridget",
+            //    Credit = 3,
+            //    MajorId = major.Id,
+            //};
+            //context.Courses.Add(course);
 
 
-            context.SaveChanges();
+            //context.SaveChanges();
+
+
             //var major = context.Majors.SingleOrDefault(m => m.Description == "ESports");//looks for Computer Science, returns the Id
             //var student = new Student {
             //    Firstname = "J",

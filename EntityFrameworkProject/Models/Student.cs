@@ -22,7 +22,8 @@ namespace EntityFrameworkProject.Models {
             return $"{this.Id}, {this.Firstname} {this.Lastname}, {this.SAT}, {this.GPA}, {this.IsFulltime}, {this.MajorId}, {this.Major}";
         }
 
-
+        public int? CourseId { get; set; }
+        public virtual Course Course { get; set; }
 
         public int? MajorId { get; set; }//the '?' creates a nullable int type
         public virtual Major Major { get; set; } 
