@@ -21,5 +21,7 @@ namespace EntityFrameworkProject.Models {
         public DbSet<Major> Majors { get; set; }
 
         public DbSet<Major2> Major2s { get; set; }
+
+        public DbSet<Course> Courses { get; set; }
     }
 }
