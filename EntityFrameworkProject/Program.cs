@@ -3,12 +3,32 @@ using System;
 using System.Linq;//allows the use of ToList, OrderBy, ToArray, etc.
 
 namespace EntityFrameworkProject {
-    class Program {
+    public class Program {
+
+        public static Student GetStudentByLastname (string lastname) {
+            var db = new AppDbContext();
+            var students = db.Students.Where(s => s.Lastname.Equals(lastname)).ToArray();
+            if(students.Count() == 0) {
+                return null;
+            } else {
+                return students[0];
+            }
+        }
+
+
+
+        public static Student GetStudentById(int id) {
+            var db = new AppDbContext();
+            return db.Students.Find(id);
+        }
+
+
+
         static void Main(string[] args) {
 
             var context = new AppDbContext();//we can only access the tables we include in the DbContext
 
-            //var major = context.Majors.SingleOrDefault(m => m.Description == "ESports");
+            //var major = context.Majors.SingleOrDefault(m => m.Description == "ESports");//can also use "Contains" rather than the "=="
             //var course = new Course {
             //    Name = "Controller 101",
             //    Instructor = "Ms. Take",
